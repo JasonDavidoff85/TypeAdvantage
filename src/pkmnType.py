@@ -10,11 +10,10 @@ for i in pokemon['results']:
 	pokemonNameList.append(i['name'])
 
 
-pkmn = 'squirtle'
-#pkmn = input("Pokemon name >> ")
+pkmn = input("Pokemon name >> ")
 while pkmn.lower() not in pokemonNameList:
 	print('Pokemon not found...')
-	#pkmn = input("Pokemon name >> ")
+	pkmn = input("Pokemon name >> ")
 
 pkmnUrl = "https://pokeapi.co/api/v2/pokemon/%s/" %(pkmn.lower())
 pokemonInfo = requests.get(url=pkmnUrl)
